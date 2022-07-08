@@ -1,0 +1,487 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #AA5A21;
+    color: #fff;
+  }
+  body{
+    overflow: hidden !important;
+  }
+  /* To center everything in game */
+  .game_area{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden !important;
+  }
+  
+  
+  
+  /* Score Board */
+  .score{
+    display: flex;
+    width: 30vw;
+    justify-content: space-evenly;
+    z-index: 1;
+    margin-top: 30px;
+  }
+  
+  /* Score */
+  .p-count,.c-count{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  /* Styling on all three buttons */
+  .rock, .paper, .scissor{
+    padding: 0.8rem;
+    width: 100px;
+    border-radius: 10px;
+    background: #552D10;
+    outline: none;
+    border-color: green;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .move{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+  
+  .movesleft{
+    margin-top: 20px;
+  }
+  
+  /* Reload button style */
+  .reload {
+    display: none;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #552D10;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .result{
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+  
+  /* Responsive Design section */
+  @media screen and (max-width: 612px)
+  {
+    .title{
+      text-align: center;
+    }
+    .score{
+      width: 100vw;
+    }
+    .options{
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  
+  /* MEDIA QUERIES */
+  
+  /* For Desktop View */
+  @media screen and (min-width: 1024px) {
+      /* displaying three buttons in one line */
+      .options{
+        display: flex;
+        width: 50vw;
+        justify-content: space-evenly;
+        margin-top: 4rem;
+      }
+      
+      /* Title of the game */
+      .title{
+        font-size: 4rem;
+        z-index: 2;
+      }
+  }
+  
+  /* For Tablet View */
+  @media screen and (min-device-width: 768px)
+  and (max-device-width: 1024px) and (orientation: portrait){
+      /* displaying three buttons in one line */
+      /* Title of the game */
+    .title{
+      font-size: 4rem;
+      z-index: 2;
+    }
+  
+    .rock, .paper, .scissor{
+    padding: 1rem;
+    width: 100px;
+    border-radius: 10px;
+    background: green;
+    outline: none;
+    border-color: green;
+    border: none;
+    cursor: pointer;
+  }
+  .options{
+      display: flex;
+      width: 60vw;
+      justify-content: space-evenly;
+      margin-top: 5rem;
+    }
+  
+  }
+   
+  /* For Mobile Portrait View */
+  @media screen and (max-device-width: 480px)
+  and (orientation: portrait) {
+    
+    /* Title of the game */
+    .title{
+      font-size: 2.5rem;
+      z-index: 2;
+    }
+  
+    /* displaying three buttons in one line */
+    .options{
+      display: flex;
+      width: 70vw;
+      justify-content: space-evenly;
+      margin-top: 4rem;
+    }
+  
+    /* Styling on all three buttons */
+     .rock, .paper, .scissor{
+      padding: 0.8rem;
+      width: 100px;
+      border-radius: 10px;
+      background: green;
+      outline: none;
+      border-color: green;
+      border: none;
+      cursor: pointer;
+      margin: 3px;
+    }
+  
+    .move{
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+  
+  }
+   
+  /* For Mobile Landscape View */
+  @media screen and (max-device-width: 1040px)
+  and (orientation: landscape) {
+      
+     /* Title of the game */
+      .title{
+        font-size: 2.5rem;
+        margin-top: 20px;
+        z-index: 2;
+      }
+  
+      .options{
+        display: flex;
+        width: 40vw;
+        justify-content: space-evenly;
+        margin-top: 1rem;
+      }
+  
+      .rock, .paper, .scissor{
+        padding: 0.5rem;
+        width: 70px;
+        border-radius: 10px;
+        background: green;
+        outline: none;
+        border-color: green;
+        border: none;
+        cursor: pointer;
+      }
+  
+      .result{
+        margin-top: 20px;
+        font-size: 1.5rem !important;
+  
+      }
+      .move{
+        font-size: 1rem;
+      }
+  
+    
+  }
+   
+  /* For Mobile Phones Portrait or Landscape View */
+  @media screen and (max-device-width: 640px) {
+    
+  }
+  
+  /* Surface Duo */
+  @media screen and (max-device-width: 720px) and (min-device-width:540px) {
+    .title{
+      font-size: 2.5rem;
+      margin-top: 20px;
+      z-index: 2;
+    }
+    .options{
+      display: flex;
+      width: 60vw;
+      justify-content: space-evenly;
+      margin-top: 1rem;
+    }
+    /* Styling on all three buttons */
+   .rock, .paper, .scissor{
+    padding: 0.2rem;
+    border-radius: 10px;
+    background: green;
+    outline: none;
+    border-color: green;
+    border: none;
+    cursor: pointer;
+    margin: 2px;
+  }
+  .score{
+    margin-top: 1px;
+  }
+  }
+  
+  /* Nexus 5 */
+  @media screen and (max-device-width: 640px) and (min-device-width:360px) and (orientation: landscape) {
+    /* Score Board */
+    .title{
+      font-size: 1.5rem;
+      margin-top: 20px;
+      z-index: 2;
+    }
+  
+  /* Score */
+  .p-count,.c-count{
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 0.1rem;
+  }
+  
+  /* Styling on all three buttons */
+  .rock, .paper, .scissor{
+    padding: 0.2rem;
+    border-radius: 10px;
+    background: green;
+    outline: none;
+    border-color: green;
+    border: none;
+    cursor: pointer;
+    margin: 2px;
+  }
+  
+  .move{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .movesleft{
+    margin-top: 20px;
+  }
+  
+  /* Reload button style */
+  .reload {
+    display: none;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background: green;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .result{
+    font-size: 1rem !important;
+  }
+  }
+  
+  /* Jio */
+  @media screen and (max-device-width: 320px) and (min-device-width:240px) {
+    /* Score Board */
+    .title{
+      font-size: 1.5rem;
+      margin-top: 20px;
+      z-index: 2;
+    }
+  
+    .options{
+      display: flex;
+      width: 60vw;
+      justify-content: space-evenly;
+      margin-top: 1rem;
+    }
+  
+  /* Score */
+  .p-count,.c-count{
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 0.1rem;
+  }
+  
+  /* Styling on all three buttons */
+   .rock, .paper, .scissor{
+    padding: 0.5rem;
+    width: 100px;
+    border-radius: 10px;
+    background: green;
+    outline: none;
+    border-color: green;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .move{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .movesleft{
+    margin-top: 20px;
+  }
+  
+  /* Reload button style */
+  .reload {
+    display: none;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background: green;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .result{
+    font-size: 1rem !important;
+  }
+  }
+  
+  
+  /* Jio Landscape */
+  @media screen and (max-device-width: 320px) and (min-device-width:240px)  and (orientation: landscape){
+    /* Score Board */
+    .title{
+      font-size: 1.5rem;
+      margin-top: 20px;
+      z-index: 2;
+    }
+  
+    .options{
+      display: flex;
+      width: 60vw;
+      justify-content: space-evenly;
+      margin-top: 1rem;
+    }
+    .score{
+      font-size: 0.5rem;
+      margin-top: 1px;
+    }
+  
+  /* Score */
+  .p-count,.c-count{
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 0.1rem;
+  }
+  
+  /* Styling on all three buttons */
+   .rock, .paper, .scissor{
+    padding: 0.3rem;
+    width: 100px;
+    border-radius: 10px;
+    background: green;
+    outline: none;
+    /*border: none;*/
+    cursor: pointer;
+    margin: 3px;
+  }
+  
+  .move{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .movesleft{
+    margin-top: 20px;
+  }
+  
+  /* Reload button style */
+  .reload {
+    display: none;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background: green;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .result{
+    font-size: 1rem !important;
+  }
+  }
+  
+  /* Nexus 5 */
+  @media screen and (max-device-width: 732px) and (min-device-width:412px) and (orientation: landscape) {
+    /* Score Board */
+    .title{
+      font-size: 1.5rem;
+      margin-top: 20px;
+      z-index: 2;
+    }
+    .result{
+      font-size: 0.8rem !important;
+    }
+  
+    .move{
+      font-size: 1rem;
+      font-weight: bold;
+      margin-top: 1px;
+    }
+    .reload {
+      display: none;
+      padding: 0.5rem;
+      background: green;
+      outline: none;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+  
+   
+  /* For iPhone 4 Portrait or Landscape View */
+  @media screen and (min-device-width: 320px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+  }
+   
+  /* For iPhone 5 Portrait or Landscape View */
+  @media (device-height: 568px) and (device-width: 320px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+  }
+   
+  /* For iPhone 6 and 6 plus Portrait or Landscape View */
+  @media (min-device-height: 667px) and (min-device-width: 375px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+    
+  }

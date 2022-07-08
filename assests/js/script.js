@@ -9,7 +9,7 @@ const gameArea = () => {
     const paperButton = document.querySelector('.paper');
     const scissorButton = document.querySelector('.scissor');
     const playerOpt = [rockButton,paperButton,scissorButton];
-    const computerOpt = ['rock','paper','scissors']
+    const computerOpt = ['rock','paper','scissor']
      // Function to start playing game
      playerOpt.forEach(option => {
         option.addEventListener('click',function(){

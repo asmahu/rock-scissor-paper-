@@ -125,9 +125,7 @@
     padding: 1rem;
     width: 100px;
     border-radius: 10px;
-    background: green;
     outline: none;
-    border-color: green;
     border: none;
     cursor: pointer;
   }
@@ -163,9 +161,7 @@
       padding: 0.8rem;
       width: 100px;
       border-radius: 10px;
-      background: green;
       outline: none;
-      border-color: green;
       border: none;
       cursor: pointer;
       margin: 3px;
@@ -201,9 +197,7 @@
         padding: 0.5rem;
         width: 70px;
         border-radius: 10px;
-        background: green;
         outline: none;
-        border-color: green;
         border: none;
         cursor: pointer;
       }
@@ -242,9 +236,7 @@
    .rock, .paper, .scissor{
     padding: 0.2rem;
     border-radius: 10px;
-    background: green;
     outline: none;
-    border-color: green;
     border: none;
     cursor: pointer;
     margin: 2px;
@@ -274,9 +266,7 @@
   .rock, .paper, .scissor{
     padding: 0.2rem;
     border-radius: 10px;
-    background: green;
     outline: none;
-    border-color: green;
     border: none;
     cursor: pointer;
     margin: 2px;
@@ -297,7 +287,6 @@
     display: none;
     margin-top: 1rem;
     padding: 0.5rem;
-    background: green;
     outline: none;
     border: none;
     border-radius: 10px;
@@ -337,9 +326,7 @@
     padding: 0.5rem;
     width: 100px;
     border-radius: 10px;
-    background: green;
     outline: none;
-    border-color: green;
     border: none;
     cursor: pointer;
   }
@@ -359,7 +346,6 @@
     display: none;
     margin-top: 1rem;
     padding: 0.5rem;
-    background: green;
     outline: none;
     border: none;
     border-radius: 10px;
@@ -404,7 +390,6 @@
     padding: 0.3rem;
     width: 100px;
     border-radius: 10px;
-    background: green;
     outline: none;
     /*border: none;*/
     cursor: pointer;
@@ -426,7 +411,6 @@
     display: none;
     margin-top: 1rem;
     padding: 0.5rem;
-    background: green;
     outline: none;
     border: none;
     border-radius: 10px;
@@ -458,7 +442,6 @@
     .reload {
       display: none;
       padding: 0.5rem;
-      background: green;
       outline: none;
       border: none;
       border-radius: 10px;

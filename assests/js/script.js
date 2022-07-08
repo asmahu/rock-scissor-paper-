@@ -43,8 +43,8 @@ const gameArea = () => {
     if(plyr === comp){
       result.textContent = 'Tie'
     }
-    else if(plyr == 'Rock'){
-      if(comp == 'Paper'){
+    else if(plyr == 'rock'){
+      if(comp == 'paper'){
         result.textContent = 'Computer Won';
         computerScr++;
         computerScoreBoard.textContent = computerScr;
@@ -55,24 +55,24 @@ const gameArea = () => {
         playerScoreBoard.textContent = playerScr;
       }
     }
-    else if(plyr == 'scissors'){
+    else if(plyr == 'scissor'){
       if(comp == 'rock'){
-        result.textContent = 'Computer Won';
+        result.textContent = 'Computer Won'
         computerScr++;
         computerScoreBoard.textContent = computerScr;
       }else{
-        result.textContent = 'Player Won';
+        result.textContent = 'Player Won'
         playerScr++;
         playerScoreBoard.textContent = playerScr;
       }
     }
     else if(plyr == 'paper'){
-      if(comp == 'scissors'){
-        result.textContent = 'Computer Won';
+      if(comp == 'scissor'){
+        result.textContent = 'Computer Won'
         computerScr++;
         computerScoreBoard.textContent = computerScr;
       }else{
-        result.textContent = 'Player Won';
+        result.textContent = 'Player Won'
         playerScr++;
         playerScoreBoard.textContent = playerScr;
       }
@@ -100,7 +100,7 @@ const gameArea = () => {
     }
     else if(playerScr < computerScr){
       result.style.fontSize = '2rem';
-      result.innerText = 'You Lost The Game';
+      result.innerText = 'You Lost The Game'
       result.style.color = 'fff';
     }
     else{
@@ -108,7 +108,7 @@ const gameArea = () => {
       result.innerText = 'Tie';
       result.style.color = '#fff'
     }
-    reloadButton.innerText = 'Restart';
+    reloadButton.innerText = 'Replay';
     reloadButton.style.display = 'flex'
     reloadButton.addEventListener('click',() => {
       window.location.reload();

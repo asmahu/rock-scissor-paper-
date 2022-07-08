@@ -163,6 +163,8 @@ lt = document.querySelector('.result');
 playGame();
   
 }
+// Calling the game function
+gameArea();
 
           
   

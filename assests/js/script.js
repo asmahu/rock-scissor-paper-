@@ -33,5 +33,51 @@ const gameArea = () => {
     })
     
   }
+  // Function to decide winner
+  const winner = (plyr,comp) => {
+    const result = document.querySelector('.result');
+    const playerScoreBoard = document.querySelector('.p-count');
+    const computerScoreBoard = document.querySelector('.c-count');
+    plyr = plyr.toLowerCase();
+    comp = comp.toLowerCase();
+    if(plyr === comp){
+      result.textContent = 'Tie'
+    }
+    else if(plyr == 'Rock'){
+      if(comp == 'Paper'){
+        result.textContent = 'Computer Won';
+        computerScr++;
+        computerScoreBoard.textContent = computerScr;
+
+      }else{
+        result.textContent = 'Player Won'
+        playerScr++;
+        playerScoreBoard.textContent = playerScr;
+      }
+    }
+    else if(plyr == 'scissors'){
+      if(comp == 'rock'){
+        result.textContent = 'Computer Won';
+        computerScr++;
+        computerScoreBoard.textContent = computerScr;
+      }else{
+        result.textContent = 'Player Won';
+        playerScr++;
+        playerScoreBoard.textContent = playerScr;
+      }
+    }
+    else if(plyr == 'paper'){
+      if(comp == 'scissors'){
+        result.textContent = 'Computer Won';
+        computerScr++;
+        computerScoreBoard.textContent = computerScr;
+      }else{
+        result.textContent = 'Player Won';
+        playerScr++;
+        playerScoreBoard.textContent = playerScr;
+      }
+    }
+  }
+
           
   

@@ -22,6 +22,16 @@ const gameArea = () => {
           const choiceNum = Math.floor(Math.random()*3);
           const computerChoice = computerOpt[choiceNum];
   
-          
+           // Function to check who wins
+        winner(this.innerText,computerChoice)
+        
+        // Calling gameOver function after 10 moves
+        if(moves == 10){
+          gameover(playerOpt,movesLeft);
+        }
+      })
+    })
+    
+  }
           
   

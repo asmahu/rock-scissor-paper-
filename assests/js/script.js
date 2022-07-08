@@ -1,28 +1,31 @@
 // Complete logic of game inside this function
 const gameArea = () => {
-    let playerScr = 0;
-    let computerScr = 0;
-    let moves = 0;
-     // Function to
+  let playerScr = 0;
+  let computerScr = 0;
+  let moves = 0;
+
+
+  // Function to
   const playGame = () => {
     const rockButton = document.querySelector('.rock');
     const paperButton = document.querySelector('.paper');
-    const scissorButton = document.querySelector('.scissors');
+    const scissorButton = document.querySelector('.scissor');
     const playerOpt = [rockButton,paperButton,scissorButton];
-    const computerOpt = ['rock','paper','scissor']
-     // Function to start playing game
-     playerOpt.forEach(option => {
-        option.addEventListener('click',function(){
-  
-          const movesLeft = document.querySelector('.movesleft');
-          moves++;
-          movesLeft.innerText = `Moves Left: ${10-moves}`;
-          
-  
-          const choiceNum = Math.floor(Math.random()*3);
-          const computerChoice = computerOpt[choiceNum];
-  
-           // Function to check who wins
+    const computerOpt = ['rock','paper','scissors']
+    
+    // Function to start playing game
+    playerOpt.forEach(option => {
+      option.addEventListener('click', function(){
+
+        const movesLeft = document.querySelector('.movesleft');
+        moves++;
+        movesLeft.innerText = `Moves Left: ${10-moves}`;
+        
+
+        const choiceNum = Math.floor(Math.random()*3);
+        const computerChoice = computerOpt[choiceNum];
+
+        // Function to check who wins
         winner(this.innerText,computerChoice)
         
         // Calling gameOver function after 10 moves
@@ -33,6 +36,7 @@ const gameArea = () => {
     })
     
   }
+
   // Function to decide winner
   const winner = (plyr,comp) => {
     const result = document.querySelector('.result');
@@ -41,7 +45,7 @@ const gameArea = () => {
     plyr = plyr.toLowerCase();
     comp = comp.toLowerCase();
     if(plyr === comp){
-      result.textContent = 'Tie'
+      result.textContent = 'Tie';
     }
     else if(plyr == 'rock'){
       if(comp == 'paper'){
@@ -50,7 +54,7 @@ const gameArea = () => {
         computerScoreBoard.textContent = computerScr;
 
       }else{
-        result.textContent = 'Player Won'
+        result.textContent = 'Player Won';
         playerScr++;
         playerScoreBoard.textContent = playerScr;
       }
@@ -78,6 +82,7 @@ const gameArea = () => {
       }
     }
   }
+
   // Function to run when game is over
   const gameover = (playerOpt,movesLeft) => {
 
@@ -95,12 +100,12 @@ const gameArea = () => {
 
     if(playerScr > computerScr){
       result.style.fontSize = '2rem';
-      result.innerText = 'You Won The Game'
+      result.innerText = 'You Won The Game';
       result.style.color = '#fff';
     }
     else if(playerScr < computerScr){
       result.style.fontSize = '2rem';
-      result.innerText = 'You Lost The Game'
+      result.innerText = 'You Lost The Game';
       result.style.color = 'fff';
     }
     else{
@@ -115,12 +120,11 @@ const gameArea = () => {
     })
   }
 
-// Calling playGame function
-playGame();
+
+  // Calling playGame function
+  playGame();
   
 }
+
 // Calling the game function
 gameArea();
-
-          
-  
